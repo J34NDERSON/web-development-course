@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logoInstagram {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background {
+  height: 330px;
+  width: 330px;
+  border-radius: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    130deg,
+    #6559ca,
+    #bc318f 30%,
+    #e33f5f 50%,
+    #f77638 70%,
+    #fec66d 90%
+  );
+
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
+    radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+    linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+
+.square {
+  height: 240px;
+  width: 240px;
+  border: 24px solid white;
+  border-radius: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.circle {
+  height: 120px;
+  width: 120px;
+  border: 24px solid white;
+  border-radius: 100%;
+}
+
+.dot {
+  height: 32px;
+  width: 32px;
+  background: white;
+  border-radius: 100%;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}

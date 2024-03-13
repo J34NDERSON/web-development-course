@@ -1,0 +1,125 @@
+@font-face {
+  font-family: digital-clock;
+  src: url("fonts/DS-DIGII.TTF");
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #088b8b;
+}
+
+.main-container {
+  height: 100vh;
+  width: 100%;
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-container {
+  width: 40rem;
+  height: 40rem;
+  background: #ddd;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  z-index: 1;
+
+  overflow: hidden;
+}
+
+.semicircle {
+  width: 50%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform-origin: right center;
+}
+
+.semicircle:nth-child(1) {
+  background: #088b8b;
+  z-index: 2;
+}
+
+.semicircle:nth-child(2) {
+  background: #088b8b;
+  z-index: 3;
+}
+
+.semicircle:nth-child(3) {
+  background: #ddd;
+  z-index: 4;
+}
+
+.outermost-circle {
+  width: 39rem;
+  height: 39rem;
+  border-radius: 50%;
+  background: white;
+  z-index: 5;
+}
+
+.timer-container {
+  width: 35rem;
+  height: 20rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer {
+  font-size: 6.4rem;
+  font-weight: 400;
+  font-family: digital-clock;
+
+  z-index: 6;
+  display: none;
+}
+
+.start-button {
+  font-size: 4.8rem;
+  color: #088b8b;
+
+  border: none;
+  background: none;
+
+  position: absolute;
+
+  z-index: 7;
+}
+
+.start-button:hover {
+  cursor: pointer;
+  filter: brightness(1.1);
+}
+
+.colon {
+  background: transparent;
+
+  width: 1rem;
+  padding-bottom: 1rem;
+
+  margin-left: 0;
+  margin-right: 0;
+}

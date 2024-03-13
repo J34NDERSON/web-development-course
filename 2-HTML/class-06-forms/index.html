@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 06 Forms</title>
+    <style>
+      body {
+        width: 320px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Class 06 Forms</h1>
+
+    <form id="formSearch" method="get" enctype="multipart/form-data">
+      <label for="search">Pesquisar</label> <br />
+      <input
+        type="text"
+        id="search"
+        name="search"
+        size="25"
+        maxlength="25"
+        placeholder="Digite para pesquisar"
+        aria-label="Campo de busca"
+        autofocus
+        autocomplete="Emanuel"
+        title="Digite apenas texto"
+        required
+      />
+      <button type="submit" form="formSearch">Pesquisar</button>
+    </form>
+
+    <br />
+
+    <form id="formLogin" method="get">
+      <fieldset>
+        <legend>Login</legend>
+
+        <label for="email">Email</label><br />
+        <input
+          type="email"
+          autocomplete="email"
+          placeholder="Insira seu email"
+          name="email"
+          pattern=".*@.*\.com"
+          title="Insira um email válido!"
+        />
+
+        <br /><br />
+        <label for="password">Password</label><br />
+        <input
+          type="password"
+          name="password"
+          minlength="6"
+          pattern="[0-9a-zA-Z]{4-8}"
+          placeholder="Insira sua senha"
+          title="Coloque sua senha 6 a 8 caracteres alfanuméricos"
+          required
+          inputmode="numeric"
+          autocomplete="new-password"
+        />
+        <!-- inputmode para teclado numérico no celular -->
+
+        <br /><br />
+        <button type="submit" form="formLogin">Login</button>
+        <button type="reset" form="formLogin">Resetar</button>
+      </fieldset>
+    </form>
+
+    <br />
+
+    <form method="get">
+      <input
+        type="number"
+        name="number"
+        placeholder="Insira número"
+        inputmode="numeric"
+        min="0"
+        max="100"
+        step="5"
+      />
+
+      <br /><br />
+
+      <!-- types: datetime-local, month, time, week  -->
+      <input type="date" value="2022-05-26" name="date" />
+
+      <br /><br />
+      <input type="range" min="0" max="100" step="1" value="70" />
+
+      <br /><br />
+
+      <!-- Input file precisa da estrutura form com enctype="multipart/form-data" (tratamento de dado) -->
+      <input type="file" placeholder="Insira um arquivo" accept="image/*" multiple />
+      <!-- aceppt: ".doc"; ".pdf"; ".svg"; "image/*" ; "audio/*" ; "video/*" -->
+
+      <br /><br />
+
+      <input
+        type="color"
+        value="#00ff00"
+        list="colors"
+        name="color"
+        placeholder="Insira sua cor favorita"
+      />
+
+      <datalist id="colors">
+        <option>#ff0000</option>
+        <option>#00ff00</option>
+        <option>#0000ff</option>
+      </datalist>
+
+      <br /><br />
+
+      <!-- input checkbox  -->
+      <fieldset>
+        <legend>Favoritos</legend>
+        <div>
+          <input type="checkbox" name="audio" id="audio" checked />
+          <label for="audio">Audio</label>
+        </div>
+        <div>
+          <input type="checkbox" name="image" id="image" />
+          <label for="image">Imagem</label>
+        </div>
+      </fieldset>
+
+      <br />
+
+      <!-- input radio -->
+      <fieldset>
+        <legend>Aceita os termos de uso?</legend>
+        <label for="yes">Sim</label>
+        <input checked type="radio" id="yes" name="term" value="accept" />
+        <label for="no">Não</label>
+        <input type="radio" id="no" name="term" value="notAccept" />
+      </fieldset>
+
+      <br />
+
+      <label for="students">Alunos</label>
+      <select name="students" id="students" multiple size="3">
+        <!--Mais de um elemento: multiple; size = "2" quantos elementos quero deixar visível-->
+        <option value="s001">Emanuel</option>
+        <option value="s002">Adriana</option>
+        <option>Natanael</option>
+      </select>
+
+      <br /><br />
+
+      <label for="category">Escolha a Modalidade Esportiva: </label>
+      <select name="category" id="category">
+        <optgroup label="Coletivo:">
+          <option value="Futsal">Futsal</option>
+          <option value="Basquete">Basquete</option>
+          <option value="Vôlei">Vôlei</option>
+          <option value="Futebol">Futebol</option>
+        </optgroup>
+
+        <optgroup label="Individual:">
+          <option value="Xadrez">Xadrez</option>
+          <option value="Ping Pong">Ping Pong</option>
+          <option value="Skate">Skate</option>
+          <option value="Ginasta">Ginasta</option>
+        </optgroup>
+      </select>
+
+      <br /><br />
+
+      <label for="comment">Área de Comentários</label>
+      <br />
+      <textarea
+        placeholder="Insira seu comentário até 500 caracteres"
+        name="comentar"
+        id="comment"
+        cols="30"
+        rows="10"
+        maxlength="500"
+        wrap="soft"
+      ></textarea>
+
+      <br /><br />
+
+      <button type="submit">Salvar</button>
+    </form>
+  </body>
+</html>
