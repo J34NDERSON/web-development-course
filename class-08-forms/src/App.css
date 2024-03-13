@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 260px;
+  margin: 32px auto 0;
+}
+
+section {
+  margin-top: 12px;
+}
+
+label {
+  font-size: 12px;
+}
+
+input {
+  width: 100%;
+  padding: 6px 8px;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 6px 8px;
+}
+
+.errors {
+  color: red;
+  font-size: 10px;
+  display: block;
+  position: absolute;
+}
