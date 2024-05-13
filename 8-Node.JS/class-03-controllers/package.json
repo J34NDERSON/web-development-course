@@ -1,7 +1,7 @@
 {
   "name": "class-03-contollers",
   "version": "1.0.0",
-  "description": "add server routes",
+  "description": "add server controllers",
   "main": "src/server.ts",
   "scripts": {
     "start": "node dist/server.js",
@@ -12,7 +12,7 @@
     "node.js",
     "server",
     "typescript",
-    "routes"
+    "controllers"
   ],
   "author": "Emanuel Quintino",
   "license": "ISC",
