@@ -1,4 +1,4 @@
-import { Router } from "express";
+import Router from "express"
 import { fileControllers } from "../controllers/fileControllers";
 import multer from "multer";
 import { MULTER } from "../configs/uploadConfigs";
